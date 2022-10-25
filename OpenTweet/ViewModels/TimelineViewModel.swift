@@ -12,7 +12,7 @@ class TimelineViewModel: ObservableObject {
     
     // MARK: - Public properties
     
-    @Published var tweets: [TweetViewModel] = []
+    @Published private(set) var state: FetchState<[TweetViewModel], ErrorMessage> = .notInitiated
     
     // MARK: - Private propertes
     
@@ -28,12 +28,29 @@ class TimelineViewModel: ObservableObject {
     // MARK: - Public API
     
     func fetchTimeline() {
+        state = .fetching
+        
         tweetService.fetchTimeline()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] tweets in
+            .debounce(for: 0.5, scheduler: DispatchQueue.main) // Add artificial delay to simulating loading from network
+            .mapError { ErrorMessage(error: $0) }
+            .sink(receiveCompletion: { [weak self] in
+                if case .failure(let error) = $0 {
+                    self?.state = .failed(error)
+                }
+            }, receiveValue: { [weak self] tweets in
                 guard let self = self else { return }
-                self.tweets = tweets.map { TweetViewModel(tweet: $0, allTweets: tweets, tweetService: self.tweetService) }
+                self.state = .fetched(tweets.map { TweetViewModel(tweet: $0, allTweets: tweets, tweetService: self.tweetService) })
             })
             .store(in: &tokens)
+    }
+}
+
+private extension ErrorMessage {
+    
+    init(error: Error) {
+        self.init(
+            title: "Unable to load timeline",
+            message: "Try again later"
+        )
     }
 }

@@ -17,15 +17,24 @@ struct TimelineView: View {
     
     var body: some View {
         NavigationView {
-            List(timelineViewModel.tweets) { tweet in
-                Section {
-                    InvisibleNavigationLink(destination: TweetDetailView(tweet: tweet)) {
-                        TweetView(tweet: tweet, isRepliedToVisible: true)
+            Group {
+                switch timelineViewModel.state {
+                case .notInitiated: EmptyView()
+                case .fetching: ProgressView()
+                case .fetched(let tweets):
+                    List(tweets) { tweet in
+                        Section {
+                            InvisibleNavigationLink(destination: TweetDetailView(tweet: tweet)) {
+                                TweetView(tweet: tweet, isRepliedToVisible: true)
+                            }
+                            .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
+                        }
                     }
-                    .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
+                    .listStyle(PlainListStyle())
+                case .failed(let errorMessage):
+                    ErrorView(errorMessage: errorMessage)
                 }
             }
-            .listStyle(PlainListStyle())
             .navigationTitle("Timeline")
             .background(Color(red: 243 / 255, green: 243 / 255, blue: 243 / 255))
         }
