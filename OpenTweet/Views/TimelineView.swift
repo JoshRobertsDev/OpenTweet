@@ -20,7 +20,7 @@ struct TimelineView: View {
             List(timelineViewModel.tweets) { tweet in
                 Section {
                     InvisibleNavigationLink(destination: TweetDetailView(tweet: tweet)) {
-                        TweetView(tweet: tweet)
+                        TweetView(tweet: tweet, isRepliedToVisible: true)
                     }
                     .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
                 }

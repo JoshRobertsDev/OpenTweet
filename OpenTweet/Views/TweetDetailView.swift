@@ -36,7 +36,7 @@ struct TweetDetailView: View {
             Section {
                 ForEach(tweet.replies) { tweetReply in
                     InvisibleNavigationLink(destination: TweetDetailView(tweet: tweetReply)) {
-                        TweetView(tweet: tweetReply)
+                        TweetView(tweet: tweetReply, isRepliedToVisible: false)
                     }
                 }
             }
