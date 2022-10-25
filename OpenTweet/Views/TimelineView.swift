@@ -20,26 +20,7 @@ struct TimelineView: View {
             List(timelineViewModel.tweets) { tweet in
                 Section {
                     HStack(alignment: .top, spacing: 16) {
-                        AsyncImage(
-                            url: tweet.avatar,
-                            content: { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                            },
-                            placeholder: {
-                                Image(systemName: "person.fill")
-                                    .font(.headline)
-                                    .foregroundColor(.gray)
-                                    .overlay(
-                                        Circle()
-                                            .stroke(Color.gray, lineWidth: 0.5)
-                                            .frame(width: 40, height: 40)
-                                    )
-                            }
-                        )
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
+                        AvatarView(url: tweet.avatar)
                         
                         VStack(alignment: .leading, spacing: 4) {
                             HStack {

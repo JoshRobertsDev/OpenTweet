@@ -23,6 +23,7 @@
 		55CEABC629086B74002B4520 /* RelativeDateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABC529086B74002B4520 /* RelativeDateTimeFormatter.swift */; };
 		55CEABCA29086C6E002B4520 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABC829086C6E002B4520 /* TweetViewModel.swift */; };
 		55CEABCB29086C6E002B4520 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABC929086C6E002B4520 /* TimelineViewModel.swift */; };
+		55CEABCD29086F22002B4520 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABCC29086F22002B4520 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		55CEABC529086B74002B4520 /* RelativeDateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeDateTimeFormatter.swift; sourceTree = "<group>"; };
 		55CEABC829086C6E002B4520 /* TweetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
 		55CEABC929086C6E002B4520 /* TimelineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		55CEABCC29086F22002B4520 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				55CEABBE29086A4B002B4520 /* TimelineView.swift */,
+				55CEABCC29086F22002B4520 /* AvatarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				55CEABB629086916002B4520 /* JSONDecoder.swift in Sources */,
 				55CEABB929086945002B4520 /* MockData.swift in Sources */,
 				55CEABAD29086875002B4520 /* TimelineDataModel.swift in Sources */,
+				55CEABCD29086F22002B4520 /* AvatarView.swift in Sources */,
 				55CEAB7B290865E6002B4520 /* OpenTweetApp.swift in Sources */,
 				55CEABC629086B74002B4520 /* RelativeDateTimeFormatter.swift in Sources */,
 				55CEABCA29086C6E002B4520 /* TweetViewModel.swift in Sources */,
