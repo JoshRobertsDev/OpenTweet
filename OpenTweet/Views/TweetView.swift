@@ -28,7 +28,7 @@ struct TweetView: View {
                     .foregroundColor(.cyan)
                 }
                 
-                TweetContentView(content: tweet.content)
+                TweetContentView(content: tweet.content, contentRunAttributes: tweet.contentRunAttributes)
                 
                 TweetInfoView(repliesCount: tweet.repliesCount)
                     .padding(.top, 8)
