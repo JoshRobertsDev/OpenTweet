@@ -11,7 +11,7 @@ import SwiftUI
 struct OpenTweetApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TimelineView()
         }
     }
 }
