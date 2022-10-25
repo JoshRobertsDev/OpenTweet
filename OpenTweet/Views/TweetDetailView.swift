@@ -25,7 +25,7 @@ struct TweetDetailView: View {
                         TweetAuthorView(author: tweet.author, datePosted: tweet.datePosted)
                     }
                     
-                    TweetContentView(content: tweet.content)
+                    TweetContentView(content: tweet.content, contentRunAttributes: tweet.contentRunAttributes)
                         .font(.title)
                     
                     TweetInfoView(repliesCount: tweet.repliesCount)
