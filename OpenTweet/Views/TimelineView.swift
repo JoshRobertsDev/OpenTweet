@@ -24,11 +24,7 @@ struct TimelineView: View {
                         
                         VStack(alignment: .leading, spacing: 4) {
                             TweetAuthorView(author: tweet.author, datePosted: tweet.datePosted)
-                            
-                            Text(tweet.content)
-                                .font(.body)
-                                .fontWeight(.regular)
-                                .textSelection(.enabled)
+                            TweetContentView(content: tweet.content)
                             
                             HStack(spacing: 4) {
                                 Image(systemName: "bubble.right")
