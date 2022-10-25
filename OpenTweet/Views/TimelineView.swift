@@ -8,8 +8,78 @@
 import SwiftUI
 
 struct TimelineView: View {
+    
+    @ObservedObject private var timelineViewModel = TimelineViewModel(tweetService: TweetService())
+    
+    init() {
+        timelineViewModel.fetchTimeline()
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(timelineViewModel.tweets) { tweet in
+                Section {
+                    HStack(alignment: .top, spacing: 16) {
+                        AsyncImage(
+                            url: tweet.avatar,
+                            content: { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            },
+                            placeholder: {
+                                Image(systemName: "person.fill")
+                                    .font(.headline)
+                                    .foregroundColor(.gray)
+                                    .overlay(
+                                        Circle()
+                                            .stroke(Color.gray, lineWidth: 0.5)
+                                            .frame(width: 40, height: 40)
+                                    )
+                            }
+                        )
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                        
+                        VStack(alignment: .leading, spacing: 4) {
+                            HStack {
+                                Text(tweet.author)
+                                    .font(.headline)
+                                    .fontWeight(.semibold)
+                                    .lineLimit(1)
+                                
+                                Spacer()
+                                
+                                Text(tweet.datePosted)
+                                    .foregroundColor(.secondary)
+                                    .font(.caption)
+                                    .fontWeight(.semibold)
+                                    .lineLimit(1)
+                            }
+                            
+                            Text(tweet.content)
+                                .font(.body)
+                                .fontWeight(.regular)
+                                .textSelection(.enabled)
+                            
+                            HStack(spacing: 4) {
+                                Image(systemName: "bubble.right")
+                                Text("\(tweet.replies)")
+                                Spacer()
+                            }
+                            .foregroundColor(tweet.replies > 0 ? .cyan : .gray)
+                            .font(.callout)
+                            .padding(.top, 8)
+                            
+                        }
+                    }
+                    .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
+                }
+            }
+            .listStyle(PlainListStyle())
+            .navigationTitle("Timeline")
+            .background(Color(red: 243 / 255, green: 243 / 255, blue: 243 / 255))
+        }
     }
 }
 
