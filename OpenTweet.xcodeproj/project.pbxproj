@@ -14,6 +14,7 @@
 		55CEAB8C290865E8002B4520 /* OpenTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB8B290865E8002B4520 /* OpenTweetTests.swift */; };
 		55CEAB96290865E8002B4520 /* OpenTweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB95290865E8002B4520 /* OpenTweetUITests.swift */; };
 		55CEAB98290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB97290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift */; };
+		55CEABA729086778002B4520 /* timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEABA629086778002B4520 /* timeline.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		55CEAB91290865E8002B4520 /* OpenTweetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTweetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CEAB95290865E8002B4520 /* OpenTweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetUITests.swift; sourceTree = "<group>"; };
 		55CEAB97290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55CEABA629086778002B4520 /* timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeline.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		55CEAB6E290865E6002B4520 = {
 			isa = PBXGroup;
 			children = (
+				55CEABA529086778002B4520 /* Data */,
 				55CEAB79290865E6002B4520 /* OpenTweet */,
 				55CEAB8A290865E8002B4520 /* OpenTweetTests */,
 				55CEAB94290865E8002B4520 /* OpenTweetUITests */,
@@ -125,6 +128,14 @@
 				55CEAB97290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift */,
 			);
 			path = OpenTweetUITests;
+			sourceTree = "<group>";
+		};
+		55CEABA529086778002B4520 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				55CEABA629086778002B4520 /* timeline.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CEABA729086778002B4520 /* timeline.json in Resources */,
 				55CEAB82290865E8002B4520 /* Preview Assets.xcassets in Resources */,
 				55CEAB7F290865E8002B4520 /* Assets.xcassets in Resources */,
 			);
