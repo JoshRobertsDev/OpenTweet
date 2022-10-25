@@ -20,7 +20,7 @@ class TweetViewModel: ObservableObject, Identifiable {
     let replyingToTweet: String?
     let replyingTo: String?
     let repliesCount: Int
-    @Published private(set) var replies: [TweetViewModel] = []
+    @Published private(set) var replies: FetchState<[TweetViewModel], ErrorMessage> = .notInitiated
     
     // MARK: - Private properties
     
@@ -55,14 +55,34 @@ class TweetViewModel: ObservableObject, Identifiable {
     // MARK: - Public API
     
     func fetchTweetReplies() {
+        replies = .fetching
+        
         tweetService.fetchTweetReplies(forTweetId: id)
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] tweets in
+            .debounce(for: 2, scheduler: DispatchQueue.main) // Add artificial delay to simulating loading from network
+            .mapError { ErrorMessage(error: $0) }
+            .sink(receiveCompletion: { [weak self] in
+                if case .failure(let errorMessage) = $0 {
+                    self?.replies = .failed(errorMessage)
+                }
+            }, receiveValue: { [weak self] tweets in
                 guard let self = self else { return }
-                self.replies = tweets
+                
+                let viewModels = tweets
                     .filter { $0.inReplyTo == self.id }
                     .map { TweetViewModel(tweet: $0, allTweets: tweets, tweetService: self.tweetService) }
+                
+                self.replies = .fetched(viewModels)
             })
             .store(in: &tokens)
+    }
+}
+
+private extension ErrorMessage {
+    
+    init(error: Error) {
+        self.init(
+            title: "Unable to load timeline",
+            message: "Try again later"
+        )
     }
 }
