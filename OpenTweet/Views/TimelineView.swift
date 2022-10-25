@@ -25,15 +25,8 @@ struct TimelineView: View {
                         VStack(alignment: .leading, spacing: 4) {
                             TweetAuthorView(author: tweet.author, datePosted: tweet.datePosted)
                             TweetContentView(content: tweet.content)
-                            
-                            HStack(spacing: 4) {
-                                Image(systemName: "bubble.right")
-                                Text("\(tweet.replies)")
-                                Spacer()
-                            }
-                            .foregroundColor(tweet.replies > 0 ? .cyan : .gray)
-                            .font(.callout)
-                            .padding(.top, 8)
+                            TweetInfoView(commentsCount: tweet.replies)
+                                .padding(.top, 8)
                             
                         }
                     }
