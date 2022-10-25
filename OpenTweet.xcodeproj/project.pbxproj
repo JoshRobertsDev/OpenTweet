@@ -20,6 +20,7 @@
 		55CEABB929086945002B4520 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABB829086945002B4520 /* MockData.swift */; };
 		55CEABBC2908696E002B4520 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABBB2908696E002B4520 /* TweetService.swift */; };
 		55CEABBF29086A4B002B4520 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABBE29086A4B002B4520 /* TimelineView.swift */; };
+		55CEABC629086B74002B4520 /* RelativeDateTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABC529086B74002B4520 /* RelativeDateTimeFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		55CEABB829086945002B4520 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		55CEABBB2908696E002B4520 /* TweetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		55CEABBE29086A4B002B4520 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		55CEABC529086B74002B4520 /* RelativeDateTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeDateTimeFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				55CEAB80290865E8002B4520 /* Preview Content */,
 				55CEABBA2908696E002B4520 /* Services */,
 				55CEABB729086945002B4520 /* Util */,
+				55CEABC029086AC0002B4520 /* ViewModels */,
 				55CEABBD290869D3002B4520 /* Views */,
 			);
 			path = OpenTweet;
@@ -165,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				55CEABB529086916002B4520 /* JSONDecoder.swift */,
+				55CEABC529086B74002B4520 /* RelativeDateTimeFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +195,13 @@
 				55CEABBE29086A4B002B4520 /* TimelineView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		55CEABC029086AC0002B4520 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				55CEABB929086945002B4520 /* MockData.swift in Sources */,
 				55CEABAD29086875002B4520 /* TimelineDataModel.swift in Sources */,
 				55CEAB7B290865E6002B4520 /* OpenTweetApp.swift in Sources */,
+				55CEABC629086B74002B4520 /* RelativeDateTimeFormatter.swift in Sources */,
 				55CEABAB29086865002B4520 /* TweetDataModel.swift in Sources */,
 				55CEABBF29086A4B002B4520 /* TimelineView.swift in Sources */,
 			);
