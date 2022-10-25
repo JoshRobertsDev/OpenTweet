@@ -13,4 +13,8 @@ class TweetService {
     func fetchTimeline() -> AnyPublisher<[TweetDataModel], Error> {
         CurrentValueSubject<[TweetDataModel], Error>(MockData.timeline).eraseToAnyPublisher()
     }
+    
+    func fetchTweetReplies(forTweetId id: String) -> AnyPublisher<[TweetDataModel], Error> {
+        CurrentValueSubject<[TweetDataModel], Error>(MockData.timeline.filter { $0.inReplyTo == id }).eraseToAnyPublisher()
+    }
 }
