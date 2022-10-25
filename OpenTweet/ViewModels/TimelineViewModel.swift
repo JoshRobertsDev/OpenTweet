@@ -30,8 +30,10 @@ class TimelineViewModel: ObservableObject {
     func fetchTimeline() {
         tweetService.fetchTimeline()
             .receive(on: DispatchQueue.main)
-            .map { tweets in tweets.map { TweetViewModel(tweet: $0, allTweets: tweets) } }
-            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] in self?.tweets = $0 })
+            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] tweets in
+                guard let self = self else { return }
+                self.tweets = tweets.map { TweetViewModel(tweet: $0, allTweets: tweets, tweetService: self.tweetService) }
+            })
             .store(in: &tokens)
     }
 }
