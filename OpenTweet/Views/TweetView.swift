@@ -18,7 +18,7 @@ struct TweetView: View {
             VStack(alignment: .leading, spacing: 4) {
                 TweetAuthorView(author: tweet.author, datePosted: tweet.datePosted)
                 TweetContentView(content: tweet.content)
-                TweetInfoView(commentsCount: tweet.replies)
+                TweetInfoView(repliesCount: tweet.repliesCount)
                     .padding(.top, 8)
             }
         }
@@ -27,6 +27,12 @@ struct TweetView: View {
 
 struct TweetView_Previews: PreviewProvider {
     static var previews: some View {
-        TweetView(tweet: TweetViewModel(tweet: MockData.timeline[0], allTweets: MockData.timeline))
+        TweetView(
+            tweet: TweetViewModel(
+                tweet: MockData.timeline[0],
+                allTweets: MockData.timeline,
+                tweetService: TweetService()
+            )
+        )
     }
 }
