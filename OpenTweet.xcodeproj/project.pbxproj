@@ -33,6 +33,7 @@
 		55CEABDD29088D2C002B4520 /* FetchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABDC29088D2C002B4520 /* FetchState.swift */; };
 		55CEABDF29088D92002B4520 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABDE29088D92002B4520 /* ErrorMessage.swift */; };
 		55CEABE129088F02002B4520 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABE029088F02002B4520 /* ErrorView.swift */; };
+		55CEABE3290890E5002B4520 /* FetchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABE2290890E5002B4520 /* FetchingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		55CEABDC29088D2C002B4520 /* FetchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchState.swift; sourceTree = "<group>"; };
 		55CEABDE29088D92002B4520 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		55CEABE029088F02002B4520 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		55CEABE2290890E5002B4520 /* FetchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				55CEABCC29086F22002B4520 /* AvatarView.swift */,
 				55CEABE029088F02002B4520 /* ErrorView.swift */,
+				55CEABE2290890E5002B4520 /* FetchingView.swift */,
 				55CEABD8290887B0002B4520 /* InvisibleNavigationLink.swift */,
 				55CEABBE29086A4B002B4520 /* TimelineView.swift */,
 				55CEABCE29086FB4002B4520 /* TweetAuthorView.swift */,
@@ -391,6 +394,7 @@
 				55CEABD9290887B0002B4520 /* InvisibleNavigationLink.swift in Sources */,
 				55CEABDF29088D92002B4520 /* ErrorMessage.swift in Sources */,
 				55CEABDB29088B05002B4520 /* TweetDetailView.swift in Sources */,
+				55CEABE3290890E5002B4520 /* FetchingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
