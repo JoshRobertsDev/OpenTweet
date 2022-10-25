@@ -23,20 +23,7 @@ struct TimelineView: View {
                         AvatarView(url: tweet.avatar)
                         
                         VStack(alignment: .leading, spacing: 4) {
-                            HStack {
-                                Text(tweet.author)
-                                    .font(.headline)
-                                    .fontWeight(.semibold)
-                                    .lineLimit(1)
-                                
-                                Spacer()
-                                
-                                Text(tweet.datePosted)
-                                    .foregroundColor(.secondary)
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .lineLimit(1)
-                            }
+                            TweetAuthorView(author: tweet.author, datePosted: tweet.datePosted)
                             
                             Text(tweet.content)
                                 .font(.body)
