@@ -19,8 +19,10 @@ struct TimelineView: View {
         NavigationView {
             List(timelineViewModel.tweets) { tweet in
                 Section {
-                    TweetView(tweet: tweet)
-                        .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
+                    InvisibleNavigationLink(destination: TweetDetailView(tweet: tweet)) {
+                        TweetView(tweet: tweet, isRepliedToVisible: true)
+                    }
+                    .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
                 }
             }
             .listStyle(PlainListStyle())

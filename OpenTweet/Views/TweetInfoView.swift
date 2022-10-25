@@ -9,15 +9,15 @@ import SwiftUI
 
 struct TweetInfoView: View {
     
-    let commentsCount: Int
+    let repliesCount: Int
     
     var body: some View {
         HStack(spacing: 4) {
             Image(systemName: "bubble.right")
-            Text("\(commentsCount)")
+            Text("\(repliesCount)")
             Spacer()
         }
-        .foregroundColor(commentsCount > 0 ? .cyan : .gray)
+        .foregroundColor(repliesCount > 0 ? .cyan : .gray)
         .font(.callout)
     }
 }
@@ -25,8 +25,8 @@ struct TweetInfoView: View {
 struct TweetInfoView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            TweetInfoView(commentsCount: 0)
-            TweetInfoView(commentsCount: 5)
+            TweetInfoView(repliesCount: 0)
+            TweetInfoView(repliesCount: 5)
         }
     }
 }
