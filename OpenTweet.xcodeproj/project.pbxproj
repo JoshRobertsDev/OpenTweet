@@ -17,6 +17,7 @@
 		55CEABA729086778002B4520 /* timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEABA629086778002B4520 /* timeline.json */; };
 		55CEABAB29086865002B4520 /* TweetDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABAA29086865002B4520 /* TweetDataModel.swift */; };
 		55CEABAD29086875002B4520 /* TimelineDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABAC29086875002B4520 /* TimelineDataModel.swift */; };
+		55CEABB629086916002B4520 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABB529086916002B4520 /* JSONDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		55CEABA629086778002B4520 /* timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = timeline.json; sourceTree = "<group>"; };
 		55CEABAA29086865002B4520 /* TweetDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDataModel.swift; sourceTree = "<group>"; };
 		55CEABAC29086875002B4520 /* TimelineDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineDataModel.swift; sourceTree = "<group>"; };
+		55CEABB529086916002B4520 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				55CEAB7E290865E8002B4520 /* Assets.xcassets */,
 				55CEAB7C290865E6002B4520 /* ContentView.swift */,
 				55CEABA929086852002B4520 /* DataModels */,
+				55CEABB429086909002B4520 /* Extensions */,
 				55CEAB7A290865E6002B4520 /* OpenTweetApp.swift */,
 				55CEAB80290865E8002B4520 /* Preview Content */,
 			);
@@ -150,6 +153,14 @@
 				55CEABAC29086875002B4520 /* TimelineDataModel.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		55CEABB429086909002B4520 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55CEABB529086916002B4520 /* JSONDecoder.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CEABB629086916002B4520 /* JSONDecoder.swift in Sources */,
 				55CEABAD29086875002B4520 /* TimelineDataModel.swift in Sources */,
 				55CEAB7D290865E6002B4520 /* ContentView.swift in Sources */,
 				55CEAB7B290865E6002B4520 /* OpenTweetApp.swift in Sources */,
