@@ -32,6 +32,7 @@
 		55CEABDB29088B05002B4520 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABDA29088B05002B4520 /* TweetDetailView.swift */; };
 		55CEABDD29088D2C002B4520 /* FetchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABDC29088D2C002B4520 /* FetchState.swift */; };
 		55CEABDF29088D92002B4520 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABDE29088D92002B4520 /* ErrorMessage.swift */; };
+		55CEABE129088F02002B4520 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABE029088F02002B4520 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		55CEABDA29088B05002B4520 /* TweetDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailView.swift; sourceTree = "<group>"; };
 		55CEABDC29088D2C002B4520 /* FetchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchState.swift; sourceTree = "<group>"; };
 		55CEABDE29088D92002B4520 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		55CEABE029088F02002B4520 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,9 +200,9 @@
 		55CEABB729086945002B4520 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				55CEABDE29088D92002B4520 /* ErrorMessage.swift */,
 				55CEABDC29088D2C002B4520 /* FetchState.swift */,
 				55CEABB829086945002B4520 /* MockData.swift */,
-				55CEABDE29088D92002B4520 /* ErrorMessage.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				55CEABCC29086F22002B4520 /* AvatarView.swift */,
+				55CEABE029088F02002B4520 /* ErrorView.swift */,
 				55CEABD8290887B0002B4520 /* InvisibleNavigationLink.swift */,
 				55CEABBE29086A4B002B4520 /* TimelineView.swift */,
 				55CEABCE29086FB4002B4520 /* TweetAuthorView.swift */,
@@ -379,6 +382,7 @@
 				55CEABDD29088D2C002B4520 /* FetchState.swift in Sources */,
 				55CEABCF29086FB4002B4520 /* TweetAuthorView.swift in Sources */,
 				55CEABCA29086C6E002B4520 /* TweetViewModel.swift in Sources */,
+				55CEABE129088F02002B4520 /* ErrorView.swift in Sources */,
 				55CEABD329087F8C002B4520 /* TweetInfoView.swift in Sources */,
 				55CEABAB29086865002B4520 /* TweetDataModel.swift in Sources */,
 				55CEABBF29086A4B002B4520 /* TimelineView.swift in Sources */,
