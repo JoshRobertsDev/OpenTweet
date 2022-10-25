@@ -20,7 +20,7 @@ struct TimelineView: View {
             Group {
                 switch timelineViewModel.state {
                 case .notInitiated: EmptyView()
-                case .fetching: ProgressView()
+                case .fetching: FetchingView()
                 case .fetched(let tweets):
                     List(tweets) { tweet in
                         Section {
