@@ -19,18 +19,8 @@ struct TimelineView: View {
         NavigationView {
             List(timelineViewModel.tweets) { tweet in
                 Section {
-                    HStack(alignment: .top, spacing: 16) {
-                        AvatarView(url: tweet.avatar)
-                        
-                        VStack(alignment: .leading, spacing: 4) {
-                            TweetAuthorView(author: tweet.author, datePosted: tweet.datePosted)
-                            TweetContentView(content: tweet.content)
-                            TweetInfoView(commentsCount: tweet.replies)
-                                .padding(.top, 8)
-                            
-                        }
-                    }
-                    .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
+                    TweetView(tweet: tweet)
+                        .listRowInsets(.init(top: 20, leading: 20, bottom: 20, trailing: 20))
                 }
             }
             .listStyle(PlainListStyle())
