@@ -31,7 +31,7 @@ class TimelineViewModel: ObservableObject {
         state = .fetching
         
         tweetService.fetchTimeline()
-            .debounce(for: 0.5, scheduler: DispatchQueue.main) // Add artificial delay to simulating loading from network
+            .debounce(for: 1, scheduler: DispatchQueue.main) // Add artificial delay to simulating loading from network
             .mapError { ErrorMessage(error: $0) }
             .sink(receiveCompletion: { [weak self] in
                 if case .failure(let error) = $0 {

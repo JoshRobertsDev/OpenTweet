@@ -58,7 +58,7 @@ class TweetViewModel: ObservableObject, Identifiable {
         replies = .fetching
         
         tweetService.fetchTweetReplies(forTweetId: id)
-            .debounce(for: 2, scheduler: DispatchQueue.main) // Add artificial delay to simulating loading from network
+            .debounce(for: 1, scheduler: DispatchQueue.main) // Add artificial delay to simulating loading from network
             .mapError { ErrorMessage(error: $0) }
             .sink(receiveCompletion: { [weak self] in
                 if case .failure(let errorMessage) = $0 {
