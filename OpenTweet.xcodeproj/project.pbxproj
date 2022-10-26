@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551CB9122908B7B500BCF209 /* TweetDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CB9112908B7B500BCF209 /* TweetDateFormatter.swift */; };
 		55CEAB7B290865E6002B4520 /* OpenTweetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB7A290865E6002B4520 /* OpenTweetApp.swift */; };
 		55CEAB7F290865E8002B4520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55CEAB7E290865E8002B4520 /* Assets.xcassets */; };
 		55CEAB82290865E8002B4520 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55CEAB81290865E8002B4520 /* Preview Assets.xcassets */; };
-		55CEAB8C290865E8002B4520 /* OpenTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB8B290865E8002B4520 /* OpenTweetTests.swift */; };
 		55CEAB96290865E8002B4520 /* OpenTweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB95290865E8002B4520 /* OpenTweetUITests.swift */; };
 		55CEAB98290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEAB97290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift */; };
 		55CEABA729086778002B4520 /* timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 55CEABA629086778002B4520 /* timeline.json */; };
@@ -35,6 +35,7 @@
 		55CEABE129088F02002B4520 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABE029088F02002B4520 /* ErrorView.swift */; };
 		55CEABE3290890E5002B4520 /* FetchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABE2290890E5002B4520 /* FetchingView.swift */; };
 		55CEABEC290897CD002B4520 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55CEABEB290897CD002B4520 /* LaunchScreen.storyboard */; };
+		55CEABFE29089CC0002B4520 /* MockTweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CEABFD29089CBF002B4520 /* MockTweetService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551CB9112908B7B500BCF209 /* TweetDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDateFormatter.swift; sourceTree = "<group>"; };
 		55CEAB77290865E6002B4520 /* OpenTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CEAB7A290865E6002B4520 /* OpenTweetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetApp.swift; sourceTree = "<group>"; };
 		55CEAB7E290865E8002B4520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55CEAB81290865E8002B4520 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55CEAB87290865E8002B4520 /* OpenTweetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTweetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		55CEAB8B290865E8002B4520 /* OpenTweetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetTests.swift; sourceTree = "<group>"; };
 		55CEAB91290865E8002B4520 /* OpenTweetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenTweetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CEAB95290865E8002B4520 /* OpenTweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetUITests.swift; sourceTree = "<group>"; };
 		55CEAB97290865E8002B4520 /* OpenTweetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTweetUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		55CEABE029088F02002B4520 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		55CEABE2290890E5002B4520 /* FetchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingView.swift; sourceTree = "<group>"; };
 		55CEABEB290897CD002B4520 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55CEABFD29089CBF002B4520 /* MockTweetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTweetService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +164,7 @@
 		55CEAB8A290865E8002B4520 /* OpenTweetTests */ = {
 			isa = PBXGroup;
 			children = (
-				55CEAB8B290865E8002B4520 /* OpenTweetTests.swift */,
+				55CEABFB29089CA0002B4520 /* Helpers */,
 			);
 			path = OpenTweetTests;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 				55CEABDE29088D92002B4520 /* ErrorMessage.swift */,
 				55CEABDC29088D2C002B4520 /* FetchState.swift */,
 				55CEABB829086945002B4520 /* MockData.swift */,
+				551CB9112908B7B500BCF209 /* TweetDateFormatter.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -252,6 +255,14 @@
 				55CEABEB290897CD002B4520 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		55CEABFB29089CA0002B4520 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				55CEABFD29089CBF002B4520 /* MockTweetService.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +417,7 @@
 				55CEABD9290887B0002B4520 /* InvisibleNavigationLink.swift in Sources */,
 				55CEABDF29088D92002B4520 /* ErrorMessage.swift in Sources */,
 				55CEABDB29088B05002B4520 /* TweetDetailView.swift in Sources */,
+				551CB9122908B7B500BCF209 /* TweetDateFormatter.swift in Sources */,
 				55CEABE3290890E5002B4520 /* FetchingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,7 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55CEAB8C290865E8002B4520 /* OpenTweetTests.swift in Sources */,
+				55CEABFE29089CC0002B4520 /* MockTweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
