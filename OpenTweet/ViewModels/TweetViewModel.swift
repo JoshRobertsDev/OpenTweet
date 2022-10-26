@@ -109,7 +109,7 @@ private extension ErrorMessage {
     
     init(error: Error) {
         self.init(
-            title: "Unable to load timeline",
+            title: "Unable to load replies",
             message: "Try again later"
         )
     }
