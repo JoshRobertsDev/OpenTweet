@@ -14,11 +14,14 @@ struct ErrorView: View {
     var body: some View {
         VStack(spacing: 16) {
             Text(errorMessage.title)
-                .font(.title)
+                .font(.title3)
+                .fontWeight(.semibold)
             
             Text(errorMessage.message)
                 .font(.headline)
+                .fontWeight(.regular)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
