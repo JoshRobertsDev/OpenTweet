@@ -45,6 +45,8 @@ struct TweetDetailView: View {
                     }
                 case .failed(let errorMessage):
                     ErrorView(errorMessage: errorMessage)
+                        .padding(.vertical)
+                        .listRowSeparator(.hidden)
                 }
             }
         }
